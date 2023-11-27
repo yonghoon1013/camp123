@@ -75,8 +75,6 @@ function Detail() {
     kakaoMap();
   }, [detailData]);
 
-
-console.log(f);
   // const dd = detailData.sbrsCl.split(',');
 
   const imageMappings = {

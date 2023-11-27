@@ -1,0 +1,424 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+$fa-font-family: 'Font Awesome 6 Free' !default;
+
+body{
+  background-color: bisque;
+}
+
+.headBox{
+  background-color: #2B5740;
+
+  .as{
+    padding-top: 20px;
+    padding-left: 50px;
+    >a{
+      font-size: 28px;
+      color: white;
+
+    }
+  }
+
+  .search-box {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    >form{
+      position: relative;
+      width: 70%;
+      >input {
+        width: 100%;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        padding-left: 5%;
+      }
+      >.submit-btn{
+        display: none;
+      }
+      >label{
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(-5%,-50%);
+        content: url('../public/img/search-icon.png');
+        cursor: pointer;
+      }
+    }
+
+    .location-menu {
+      margin-left: 30px;
+      width: 40px;
+      height: 40px;
+      background-color: #FE7762;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      >img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: block;
+      }
+    }
+  }
+
+  .location-search-box {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 40%;
+    display: none;
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 50px 40px;
+    border-radius: 10px;
+    z-index: 10;
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 20px;
+      // text-align: end;
+      // margin-right: 10px;
+      cursor: pointer;
+    }
+
+    >.title {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      &::before{
+        padding-right: 10px;
+        content: url('../public/img/location-color.png');
+        display: block;
+      }
+    }
+
+    .location-form {
+      >form {
+        display: flex;
+        flex-direction: column;
+
+        >select {
+          border-radius: 40px;
+          width: 100%;
+          height: 50px;
+          margin: 10px 0;
+          padding: 0 5%;
+          appearance: none;
+          border: 1px solid #999999;
+
+          &:focus {
+            outline: 1px solid red;
+          }
+
+          >option {}
+        }
+
+        >button {
+          border-radius: 40px;
+          width: 100%;
+          height: 50px;
+          margin: 10px 0;
+          background-color: #FE7762;
+          border: none;
+          color: white;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .location-search-box.on {
+    display: block;
+  }
+}
+
+.homeBox{
+  max-width: 640px;
+  margin: auto;
+  background-color: white;
+  .eventImgBox{
+    .slideBox2{
+      width: 100%;
+      height: 300px;
+      .tt{
+        >.at{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .nearbyLocation{
+    padding: 0 5%;
+    >p{
+      font-weight: bold;
+      margin: 30px 0;
+      >span{
+        color: #FE7762;
+      }
+    }
+    >ul{
+
+      >li{
+        >a{
+          display: flex;
+          align-items: center;
+          margin-top: 30px;
+          >.left{
+            flex: 0.7;
+            >img{
+              width: 100%;
+              border-radius: 10%;
+              object-fit: cover;
+            }
+          }
+          >.right{
+            flex: 1;
+            padding-left: 30px;
+            >.title{
+              font-size: 18px;
+              font-weight: bold;
+              padding-bottom: 20px;
+            }
+            >.intro{
+              line-height: 1.3;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: normal;
+              word-wrap: break-word;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.listBox{
+  max-width: 640px;
+  margin: auto;
+  background-color: white;
+  .listCon{
+    padding: 0 5%;
+    >p{
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+    >ul{
+      >li{
+        margin-top: 30px;
+        >a{
+          .imgBox{
+            >img{
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+          }
+          .infoBox{
+            margin-top: 10px;
+            line-height: 1.8;
+            .title{
+
+            }
+            .type{
+
+            }
+            .adr{
+
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .moreBox{
+    text-align: center;
+    margin-top: 40px;
+    .moreBtn{
+      width: 30%;
+      padding: 1% 0;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.288);
+    }
+  }
+
+}
+
+.detailBox{
+  max-width: 640px;
+  margin: auto;
+  background-color: white;
+  .slideBox{
+    height: 250px;
+    .tt{
+      >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .detailCon{
+    padding: 0 5%;
+    .campInfo{  
+      .titleBox{
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.7;
+        .title{
+  
+        }
+  
+      }
+  
+      .adrBox{
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.7;
+      }
+  
+      .telBox{
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.7;
+        .tel::before{
+          content: '\f095';
+          font-family: $fa-font-family;
+          color: #FF9A62; 
+          display: inline-block;
+          width: 30px;
+      }
+      }
+  
+      .homepageBox{
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.7;
+        .homepage{
+          color: blue;
+          text-decoration: underline;
+        }
+        .homepage::before{
+          content: '\f015';
+          font-family: $fa-font-family;
+          color: #FF9A62; 
+          display: inline-block;
+          width: 30px;
+      }
+      }
+    }
+    .campIntro{
+      >h3{
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px 0;
+      }
+      .qwe{
+        position: relative;
+        >p{
+          white-space: normal;
+          overflow: hidden;
+          text-overflow: ellipsis; 
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* 최대 표시할 줄 수 */
+          -webkit-box-orient: vertical;
+        }
+        >button{
+          width: 100%;
+          height: 38px;
+          border: none;
+          background-color: #D9D9D9;
+          font-size: 18px;
+          cursor: pointer;
+        }
+        .introFull{ 
+          display: none;
+          z-index: 3;
+          top: 0;
+          position: absolute;
+          background-color: #c2c2c2;
+          .close{
+            text-align: end;
+            margin-top: 3%;
+            margin-right: 5%;
+            font-size: 36px;
+            cursor: pointer;
+          }
+          >p{
+            line-height: 1.3;
+            padding: 5%;
+          }
+        }
+        .introFull.on{
+          display: block;
+        }
+      }
+    }
+  
+    .campBasic{
+      >h3{
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px 0;
+      }
+      >ul{
+        >li{
+  
+        }
+      }
+    }
+  
+    .campFacility{
+      >div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        >h3{
+          font-size: 24px;
+        font-weight: bold;
+        padding: 10px 0;
+        }
+        >span{
+  
+        }
+      }
+      >ul{
+        display: flex;
+        >li{
+          width: 20%;
+          text-align: center;
+          >img{
+            display: inline-block;
+          }
+          >span{
+            display: block;
+          }
+        }
+      }
+    }
+
+    
+  }
+}
